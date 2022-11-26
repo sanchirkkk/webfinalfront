@@ -237,12 +237,12 @@ export default function comprise() {
                     <div className={styles.rows}>
                         <Row>2022 оны нийт орлого зарлага</Row>
                     {/* <br/> */}
-                    {dataAv&& <Doughnut  data={addd} width={350} height={350} />}
+                    {dataAv&& <Doughnut  data={addd} />}
                     </div>
                 </Row>
                 <Row css={{ display: "flex", "flex-direction": "column" }}>
                     <div className={styles.rows}>
-                    <Row>2022 оны өөрийн орлогын харьцаа</Row>
+                    <div>2022 оны өөрийн орлогын харьцаа</div>
                     <br/>
                     {dataAv&& <Line  data={Doughnutdata} />}
                     </div>

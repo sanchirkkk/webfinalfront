@@ -28,7 +28,7 @@ import Cpmp from '../components/comp.js'
 // }
 export default function Home() {
 
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState()
   
   // const [Dou,setDuo] = useState({})
   // let env = 'http://localhost:5001/'
@@ -87,7 +87,7 @@ useEffect(() => {
   
   useEffect(() => {
     const handleResize = () => {
-      setScrollY(window.innerWidth,);
+      setScrollY(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -120,7 +120,7 @@ useEffect(() => {
 
           <div className={styles.usercontent}>
             {menu.map((item,index)=>{
-              return(<Button onPress={clickButton} name={item}  size={scrollY < 400? "xs":"md"}  css={{color:"White",backgroundColor:"rgba(255, 255, 255, 0.1)"}} key={index}>{item}</Button>)
+              return(<Button onPress={clickButton} name={item} auto css={{color:"White",backgroundColor:"rgba(255, 255, 255, 0.1)"}} key={index}>{item}</Button>)
             })}
           </div>
          { dataCheck&&<div className={styles.usercontent1}> 

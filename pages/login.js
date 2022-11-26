@@ -14,8 +14,8 @@ export default function Login() {
     const [error,setError] = useState('')
     const [nof,setnof] = useState(false)
     const [inputValues,setInputValues] =useState({})
-    let env = 'http://localhost:5001/'
-    // let env = 'https://sanchirsfinanceback.vercel.app/'
+    // let env = 'http://localhost:5001/'
+    let env = 'https://sanchirsfinanceback.vercel.app/'
 
     const headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
