@@ -38,7 +38,6 @@ export default function Login() {
     ...inputValues,
     [evt.target.name]: value
     })
-    console.log(inputValues)
     }
 
     function Login() {
