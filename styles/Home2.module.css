@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+.main{
+   width: 100%;
+   height: 100%;
+   padding: 1rem;
+   display: flex;
+  
+}
+
+
+.rows{
+    width:100%;
+    height:50%;
+}
+
+@media (max-width:400px) {
+    .main{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+       
+     }
+     
+    .rows{
+        margin-top: 20px;
+        height:auto;
+    }
+
+}

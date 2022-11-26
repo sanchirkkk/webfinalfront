@@ -1,5 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+
 .container {
   padding: 0 2rem;
+}
+
+.logincontainer{
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 600px;
+  width: 600px;
+  height: 400px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.rlogincontainer{
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 600px;
+  width: 600px;
+  height: 600px;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+.span1{
+  font-size: 60px;
+  color: white;
+  /* text-shadow:  100px 6px 11px 11px white; */
+}
+
+.buttons{
+  margin-top: 40px;
+  width: 600px;
+  border-radius: 15px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+}
+.register>a{
+  color: rgb(13, 233, 83);
+  font-weight: 600;
+}
+
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.forms{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.inputsss{
+  
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border:none;
+  background-color: rgba(235, 235, 235, 0.102);
+  color: white;
+}
+
+.forms>input::placeholder {
+  color: white;
+  padding:15px;
+}
+
+.aaa{
+  color: rgba(235, 235, 235, 0.523);
 }
 
 .main {
@@ -10,6 +90,71 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.main >button{
+  margin-top: 15px;
+  width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+
+.main >button:before{
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+
+
+.main >button:active {
+  color: #000
+
+}
+
+
+.main >button:hover:before {
+  opacity: 1;
+}
+
+
+.main >button:after{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
 .footer {
@@ -108,6 +253,16 @@
   margin-left: 0.5rem;
 }
 
+
+.title{
+  font-size: 90px;
+  background: rgb(15,71,52);
+  background: linear-gradient(90deg, rgba(15,71,52,1) 0%, rgba(9,121,57,1) 42%, rgba(0,212,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -126,4 +281,165 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+
+
+
+.rforms{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  
+}
+
+
+
+.date{
+  width: 280px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border:none;
+  background-color: rgba(235, 235, 235, 0.102);
+  color: white;
+}
+
+.rforms>select{
+
+  width: 280px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border:none;
+  background-color: rgba(235, 235, 235, 0.102);
+  color: white;
+  padding:15px;
+}
+
+.sanchirkk{
+  /* display: none; */
+  animation-name: sanhcir;
+  animation-duration: 8s;
+  z-index: 20;
+  top: 20px;
+  right: 30px;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  /* background-color:rgba(255, 255, 255, 0.25); */
+border: 3px dotted red;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+@keyframes sanhcir {
+  0%{top: 40px; opacity: 0;}
+10%{top: 20px;opacity: 1;}
+  100%{top: 20px;opacity: 1;}
+  
+}
+
+.forms>input{
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: none;
+  color: black;
+}
+
+.forms>input::placeholder{
+  color: black;
+  margin-left: 30px;
+}
+
+@media (max-width:400px) {
+  .logincontainer{
+    /* justify-self: center; */
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* align-items: center; */
+    /* min-width: 400px; */
+    width: 400px;
+  height: auto;
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  .rlogincontainer{
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 400px;
+    width: 400px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+  
+  
+  }
+
+  .span1{
+    font-size: 60px;
+   text-align: center;
+    color: white;
+    /* text-shadow:  100px 6px 11px 11px white; */
+  }
+  .span2{
+text-align: center;
+  }
+  .buttons{
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 15px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  
+  }
+  .forms{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  .rforms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .rforms>button{
+    margin-top: 40px;
+    width: 90%;
+    border-radius: 15px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+  }
+  .forms>input{
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+  }
+  /* .inputsss{
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+  } */
 }

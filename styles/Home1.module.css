@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.main {
+    max-width: 1200px;
+    width: 1200px;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 1rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main1 {
+    max-width: 1200px;
+    width: 1200px;
+    height: 95vh;
+    min-height: 95vh;
+    padding: 1rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .dashboardCon{
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+  }
+
+  .dashboardCon1{
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+  }
+.usercontent{
+    height: 100%;
+    width: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.usercontent1{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.addN{
+    padding: 1rem;
+    width: 30%;
+    height: 100%;
+    
+
+}
+.dashboardN{
+    padding: 1rem;
+    width: 70%;
+    height: 100%;
+    
+}
+.dashboardN1{
+    padding: 1rem;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.addNbarimt{
+    display: flex;
+    width: 100%;
+    height: 30%;
+
+
+  
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 10px 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablecon{
+    /* border: 1px solid gray; */
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.427) 0px 7px 10px 0px;
+    width: 100%;
+    height: 60%;
+}
+
+.addNbarimttext{
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+}
+.depositIncome{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.depositIncome>select{
+    width: 170px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px rgb(224, 224, 224) solid;
+   
+}
+
+.datePicker{
+    width: 170px;
+    height: 45px;
+}
+
+.rows{
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    display: flex;
+}
+
+.columns{
+    color: white;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.columnsw{
+    margin-left: 20px;
+    color: white;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.columnsS{
+    color: white;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.columnsS1{
+    color: white;
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrow1{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrow{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+@media (max-width:400px) {
+
+    .main {
+        max-width: 400px;
+        width: 400px;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 1rem 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main1 {
+        max-width: 400px;
+        width: 400px;
+        height: auto;
+        min-height: auto;
+        padding: 1rem 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header{
+        width: 100%;
+        height: 10%;
+    flex-direction: column-reverse;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .dashboardCon{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    
+      }
+
+
+      .usercontent{
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+      
+    }
+
+    .addN{
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        
+    
+    }
+
+    .dashboardN{
+        padding: 1rem;
+        width: 100%;
+    height: auto;
+        
+    }
+    .rows{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .columns{
+        margin-top: 40px;
+        color: white;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .columnsw{
+        margin-top: 20px;
+        margin-left: 20px;
+        color: white;
+        height: auto;
+        width: 90%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+    .columnsS{
+        margin-top: 20px;
+        color: white;
+        height: auto;
+        width: 100%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dashboardN1{
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .usercontent1{
+        height: 100%;
+        width: 100%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+}
