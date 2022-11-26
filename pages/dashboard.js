@@ -31,7 +31,8 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   
   // const [Dou,setDuo] = useState({})
-  let env = 'http://localhost:5001/'
+  // let env = 'http://localhost:5001/'
+      let env = 'https://sanchirsfinanceback.vercel.app/'
   let menus = ["Орлого","Зарлага","Харьцуулалт"]
   const [menu,setMenu] = useState(menus)
   const [incomeCheck,setIncomecheck] = useState(true)

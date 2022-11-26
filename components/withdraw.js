@@ -16,7 +16,8 @@ export default function widthDraw() {
     // DATA 
     let option_id1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const year = ["2019","2020","2021","2022"]
-    let env = 'http://localhost:5001/'
+    // let env = 'http://localhost:5001/'
+        let env = 'https://sanchirsfinanceback.vercel.app/'
     const [visible, setVisible] = useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [inputValues, setInputValues] = useState({})

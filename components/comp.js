@@ -18,8 +18,8 @@ export default function comprise() {
     // DATA 
     let option_id1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const year = ["2019", "2020", "2021", "2022"]
-    let env = 'http://localhost:5001/'
-
+    // let env = 'http://localhost:5001/'
+    let env = 'https://sanchirsfinanceback.vercel.app/'
     const [inputValues, setInputValues] = useState({})
     const [monthloop, setloop] = useState(option_id1)
     const [dataAv, setdataAv] = useState(false)
