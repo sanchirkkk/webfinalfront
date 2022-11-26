@@ -27,7 +27,8 @@ export default function Home() {
 
 
     let option_id1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    let env = 'http://localhost:5001/'
+    // let env = 'http://localhost:5001/'
+    let env = 'https://sanchirsfinanceback.vercel.app/'
     const [visible, setVisible] = useState(false);
     const handler = () => setVisible(true);
     const [startDate, setStartDate] = useState(new Date());
