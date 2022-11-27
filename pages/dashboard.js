@@ -125,9 +125,11 @@ useEffect(() => {
           </div>
          { dataCheck&&<div className={styles.usercontent1}> 
           <User bordered
+          css={{color:"White"}}
+          // className={styles.asdsad}
             // src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
             name={uData['first_name'] + ' '+ uData['last_name'][0]}
-            color='primary'
+            // color='primary'
             description={"@" +uData['last_name']}
           >
 

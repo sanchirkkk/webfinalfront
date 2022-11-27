@@ -1,3 +1,4 @@
+
 html,
 body {
   padding: 0;
@@ -31,4 +32,7 @@ a {
   border: 2px rgb(224, 224, 224) solid;
 
 }
-
+.nextui-c-hEcroZ{
+ background-color: #e67f09;
+ border-radius: 8px;
+}
