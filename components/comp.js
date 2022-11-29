@@ -10,12 +10,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import { Doughnut, Line, Radar,Bar ,Scatter,Pie} from 'react-chartjs-2';
 import 'chart.js/auto';
-
+import Loading from '../components/loading.js';
 
 
 export default function comprise() {
 
     // DATA 
+    const [loadingschck,setLoadingCheck] = useState(true)
     let option_id1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const year = ["2019", "2020", "2021", "2022"]
     // let env = 'http://localhost:5001/'
@@ -47,6 +48,7 @@ export default function comprise() {
 
     const getdata = () => {
         let ch = false
+        setLoadingCheck(true)
         axios.get(env + 'datas?userid=' + a)
             .then((res) => {
                 if (res.data != "nondata") {
@@ -56,12 +58,15 @@ export default function comprise() {
                     setRadars(scat(res.data))
                     setaddd(allda(res.data))
                     setdataAv(true)
+                   
                 } else {
                     setdataAv(false)
                 }
+                setLoadingCheck(false)
             }).catch((err) => {
                 console.log(err)
                 setdataAv(false)
+                setLoadingCheck(false)
             })
     
         
@@ -225,7 +230,7 @@ export default function comprise() {
 
     return (
         <div className={styles.container}>
-            <main className={styles.main}>
+            {!loadingschck&&<main className={styles.main}>
 
                 <Row css={{ display: "flex", "flex-direction": "column" }}>
                     <div className={styles.rows}>
@@ -257,7 +262,8 @@ export default function comprise() {
 
 
 
-            </main>
+            </main>}
+            {loadingschck&&<Loading/>}
 
 
         </div>

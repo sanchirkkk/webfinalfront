@@ -40,7 +40,8 @@ export default function Login() {
     })
     }
 
-    function Login() {
+    function Login(event) {
+        event.preventDefault();
         let datas ;
         if (inputValues.mail != ''&&inputValues.password != ''){
             axios.post(env+'login', inputValues,
@@ -99,15 +100,18 @@ export default function Login() {
                 Хувийн санхүү-д тавтай морилно уу
             </span>
 
-            <div className={styles.forms}>
-
+            <div >
+                <form className={styles.forms } onSubmit={Login}>
                 <input type="text"  value={inputValues['mail']}   onChange={handleChange}  name="mail" placeholder='Нэвтрэх нэр' />
 
-                <input type="password"  value={inputValues['password']}   onChange={handleChange} name="password" placeholder='Нууц үг' />
-            </div>
-            <button className={styles.buttons} onClick={Login}>
+                    <input type="password"  value={inputValues['password']}   onChange={handleChange} name="password" placeholder='Нууц үг' />
+                    <button className={styles.buttons} onClick={Login}>
                 Нэвтрэх
-            </button>
+                </button>   
+                </form>
+                
+            </div>
+           
 
             <div className={styles.register}> <ul>Гишүү биш ?,</ul> <Link href='/register' > Бүртгүүлэх  </Link></div>
             {nof&&<AddNofi error={error} />}

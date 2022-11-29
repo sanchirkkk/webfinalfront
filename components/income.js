@@ -10,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import { Doughnut, Line, Radar } from 'react-chartjs-2';
 import 'chart.js/auto';
+import Loadings from '../components/loading.js'
 // import { type } from '@amcharts/amcharts5';
 
 // export async function getServerSideProps(context) {
@@ -39,7 +40,7 @@ export default function Home() {
     const [monthloop, setloop] = useState(option_id1)
     const [sD, setSd] = useState('10')
     const [eD, setEd] = useState('11')
-
+    const [loadingschck,setLoadingCheck] = useState(true)
 
     const [Doughnutdata, setDouData] = useState({})
     const [Lines, setLines] = useState({})
@@ -69,7 +70,7 @@ export default function Home() {
 
     }
     const getdata = () => {
-
+        setLoadingCheck(true)
         axios.get(env + 'incomedata?userid=' + a)
             .then((res) => {
                 if (res.data != "nondata") {
@@ -83,12 +84,13 @@ export default function Home() {
                 } else {
                     setdataAv(false)
                 }
-
+                setLoadingCheck(false)
             }).catch((err) => {
                 console.log(err)
                 setdataAv(false)
+                setLoadingCheck(false)
             })
-
+            
     }
 
     useEffect(() => {
@@ -312,7 +314,6 @@ export default function Home() {
         { value: 'Нэмэлт' }
     ]
 
-
     return (
         <div className={styles.container}>
 
@@ -402,8 +403,8 @@ export default function Home() {
 
                     </div>
                     <div className={styles.dashboardN}>
-
-                     { dataAv&&  <div className={styles.rows}>
+                    {loadingschck&&<Loadings/>}
+                     { !loadingschck&&dataAv&&  <div className={styles.rows}>
                             <div className={styles.columns}>
                                 <Row>НИЙТ ОРЛОГО</Row>
                                 {dataAv && <Doughnut
@@ -447,7 +448,7 @@ export default function Home() {
                             </div>
 
                         </div>}
-                        {dataAv&& <div className={styles.rows} css={{ marginTop: "20px" }}>
+                        {!loadingschck&&dataAv&& <div className={styles.rows} css={{ marginTop: "20px" }}>
                             <div className={styles.columns}>
 
                                 <Row>2022 оны </Row>
@@ -462,7 +463,7 @@ export default function Home() {
                             <div className={styles.columns}></div>
 
                         </div>}
-                        {!dataAv&& <div>Үр дүн олдсонгүй</div>}
+                                    
                     </div>
                 </div>
 

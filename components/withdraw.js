@@ -10,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import { Doughnut, Line, Radar } from 'react-chartjs-2';
 import 'chart.js/auto';
+import Loading from '../components/loading.js';
 
 export default function widthDraw() {
 
@@ -17,7 +18,8 @@ export default function widthDraw() {
     let option_id1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const year = ["2019","2020","2021","2022"]
     // let env = 'http://localhost:5001/'
-        let env = 'https://sanchirsfinanceback.vercel.app/'
+    let env = 'https://sanchirsfinanceback.vercel.app/'
+    const [loadingschck,setLoadingCheck] = useState(true)
     const [visible, setVisible] = useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [inputValues, setInputValues] = useState({})
@@ -78,7 +80,7 @@ export default function widthDraw() {
     //FUNCTIONS
 
     const getdata = () => {
-
+setLoadingCheck(true)
         axios.get(env + 'withdrawdata?userid=' + a)
             .then((res) => {
                 if (res.data != "nondata") {
@@ -92,10 +94,11 @@ export default function widthDraw() {
                 } else {
                     setdataAv(false)
                 }
-
+                setLoadingCheck(false)
             }).catch((err) => {
                 console.log(err)
                 setdataAv(false)
+                setLoadingCheck(false)
             })
 
     }
@@ -399,8 +402,8 @@ export default function widthDraw() {
 
                     </div>
                     <div className={styles.dashboardN1}>
-
-                       { dataAv&&<div className={styles.columnsS}>
+                        {loadingschck&&<div css={{display:"flex","justify-content":"center"}}><Loading/></div>}
+                       { !loadingschck&&dataAv&&<div className={styles.columnsS}>
                         <Row>2022 оны зарлага сар бүрээр</Row>
                             <div className={styles.columnsS1}>
                             
@@ -413,7 +416,7 @@ export default function widthDraw() {
 
                         </div>}
 
-                       { dataAv&&<div className={styles.columnsw}>
+                       { !loadingschck&&dataAv&&<div className={styles.columnsw}>
                         <Row>2022 оны зарлага нийт</Row>
                             <div className={styles.wrow1}> 
                             
@@ -448,7 +451,7 @@ export default function widthDraw() {
                           </div>
                         </div>}
 
-                        {!dataAv&& <div>Үр дүн олдсонгүй</div>}
+                        {!dataAv&&!loadingschck &&<div>Үр дүн олдсонгүй</div>}
                     </div>
                 </div>
 
